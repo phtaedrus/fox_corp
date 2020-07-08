@@ -2,12 +2,14 @@
   provider "aws" {
     profile    = "default"
     region     = var.region
+    #access_key = aws
   }
 
   #Instantiate EC2 Instance
   resource "aws_instance" "fox-ec2" {
     ami = var.ec2_ami_code
     instance_type = "t2.micro"
+    #iam_instance_profile = aws_iam_policy_attachment.attach-fox-policy.policy_arn
 
     provisioner "local-exec" {
       command = "echo public ip address: ${aws_instance.fox-ec2.public_ip} >> ./logs/ip_address.txt"

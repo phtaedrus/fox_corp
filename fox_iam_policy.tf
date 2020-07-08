@@ -3,7 +3,7 @@
     statement {
       sid       = "FullAccess"
       effect    = "Allow"
-      resources = [aws_s3_bucket.fox_s3.bucket, aws_instance.fox-ec2.ami]
+      resources = ["arn:aws:s3:::${aws_s3_bucket.fox_s3.bucket}/path/*"]
 
       actions = [
       "s3:PutObject",
@@ -22,18 +22,17 @@
     name = "fox_user"
   }
 
-
-  resource "aws_iam_policy" "test-policy" {
-  name        = "test-policy"
+  resource "aws_iam_policy" "fox_ec2_policy" {
+  name        = "fox_ec2_policy"
   description = "A test policy"
-
+  role        = "${aws_iam_role.ec2_role.id}"
   policy = <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
     {
       "Action": [
-        "ec2:Describe*"
+        "ec2:*"
       ],
       "Effect": "Allow",
       "Resource": "*"
@@ -42,6 +41,11 @@
 }
 EOF
 }
+
+  resource "aws_iam_role" "ec2_role" {
+    name = "ec2_role"
+    
+  }
 
   resource "aws_iam_policy_attachment" "attach-fox-policy" {
     name        = "attach-fox-policy"
