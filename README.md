@@ -1,24 +1,19 @@
 #Fox Corporation Terraform Project
 
-###Use this Terraform  to generate:
+Use this Terraform  to generate:
 
-·         An S3 bucket
+* An S3 bucket
 
-·         An IAM role
+* An IAM role
 
-·         An IAM policy attached to the role that allows it to perform any
+* An IAM policy attached to the role that allows it to perform any
             S3 actions on that bucket and the objects in it
 
-·         An EC2 instance with the IAM role attached
+* An EC2 instance with the IAM role attached
 
-·         Output the public IP of the EC2 instance and the S3 bucket name to output log files
+* Output the public IP of the EC2 instance and the S3 bucket name to output log files
             
-           
-
-
-## ___
-
-
+        
 ##### I.) Please make sure that Terraform is installed on a linux machine 
 https://learn.hashicorp.com/terraform/getting-started/install.html 
 ##### II.) AWS credentials should be configured at the command line with
