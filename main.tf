@@ -2,7 +2,6 @@
   provider "aws" {
     profile    = "default"
     region     = var.region
-    #access_key = aws
   }
 
   #Instantiate EC2 Instance and tag it FoxCompute for easy recognition
@@ -23,8 +22,6 @@
   #Instantiate S3 Bucket (Random 4 char string due to bucket tear down propagation time.)
   resource "aws_s3_bucket" "fox_s3" {
     bucket = "s3-foxcorp-test-${random_string.random.result}.com"
-    #maybe remove policy argument here.
-    #policy = aws_s3_bucket_policy.fox_bucket_policy.id
     tags = {
       Name = "FoxS3Bucket"
     }
