@@ -1,0 +1,10 @@
+bucket_name_log: s3-foxcorp-test-csdy.com
+bucket_name_log: s3-foxcorp-test-ujgx.com
+bucket_name_log: s3-foxcorp-test-bbou.com
+bucket_name_log: s3-foxcorp-test-dpdr.com
+bucket_name_log: s3-foxcorp-test-kget.com
+bucket_name_log: s3-foxcorp-test-kvzv.com
+bucket_name_log: s3-foxcorp-test-xedf.com
+bucket_name_log: s3-foxcorp-test-yatz.com
+bucket_name_log: s3-foxcorp-test-ryui.com
+bucket_name_log: s3-foxcorp-test-faib.com

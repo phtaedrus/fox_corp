@@ -1,0 +1,29 @@
+random_string.random: Creating...
+random_string.random: Creation complete after 0s [id=faib]
+aws_iam_policy.fox_ec2_policy: Creating...
+aws_iam_role.fox_ec2_role: Creating...
+aws_s3_bucket.fox_s3: Creating...
+aws_iam_role.fox_ec2_role: Creation complete after 0s [id=fox_ec2_role]
+aws_iam_instance_profile.fox_iam_profile: Creating...
+aws_iam_policy.fox_ec2_policy: Creation complete after 1s [************************************]
+aws_iam_instance_profile.fox_iam_profile: Creation complete after 2s [id=fox_iam_profile]
+aws_instance.fox-ec2: Creating...
+aws_s3_bucket.fox_s3: Provisioning with 'local-exec'...
+aws_s3_bucket.fox_s3 (local-exec): Executing: ["/bin/sh" "-c" "echo bucket_name_log: s3-foxcorp-test-faib.com >> ./logs/bucket_names.txt"]
+aws_s3_bucket.fox_s3: Creation complete after 6s [id=s3-foxcorp-test-faib.com]
+aws_s3_bucket_policy.fox_bucket_policy: Creating...
+aws_s3_bucket_policy.fox_bucket_policy: Creation complete after 1s [id=s3-foxcorp-test-faib.com]
+aws_instance.fox-ec2: Still creating... [10s elapsed]
+aws_instance.fox-ec2: Still creating... [20s elapsed]
+aws_instance.fox-ec2: Still creating... [30s elapsed]
+aws_instance.fox-ec2: Still creating... [40s elapsed]
+aws_instance.fox-ec2: Provisioning with 'local-exec'...
+aws_instance.fox-ec2 (local-exec): Executing: ["/bin/sh" "-c" "echo public ip address: 34.201.171.58 >> ./logs/ip_address.txt"]
+aws_instance.fox-ec2: Creation complete after 45s [id=i-08ef512d3ac3854f1]
+
+Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+ec2_ip_address = 34.201.171.58
+fox_bucket_ip = s3-foxcorp-test-faib.c
