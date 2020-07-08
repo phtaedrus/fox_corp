@@ -10,7 +10,7 @@
     instance_type = "t2.micro"
 
     provisioner "local-exec" {
-      command = "echo public ip address: ${aws_instance.fox-ec2.public_ip} >> ./docs/ip_address.txt"
+      command = "echo public ip address: ${aws_instance.fox-ec2.public_ip} >> ./logs/ip_address.txt"
     }
   }
 
@@ -19,7 +19,7 @@
     bucket = "s3-foxcorp-test-${random_string.random.result}.com"
 
     provisioner "local-exec" {
-      command = "echo bucket_name_log: ${aws_s3_bucket.fox_s3.bucket} >> ./docs/bucket_names.txt"
+      command = "echo bucket_name_log: ${aws_s3_bucket.fox_s3.bucket} >> ./logs/bucket_names.txt"
     }
   }
 
