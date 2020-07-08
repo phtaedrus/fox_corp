@@ -1,0 +1,1 @@
+bucket_name_log: s3-foxcorp-test-prhy.com
