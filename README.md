@@ -70,7 +70,13 @@ about to be made.
 4] ```yes```
 
 ```
-> > Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+> > Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+ec2_ip_address = 54.162.170.68
+fox_bucket_ip = s3-foxcorp-test-kget.com
+
 ```
  + + Hooray! You have your infrastructure deployed. 
  
@@ -87,6 +93,15 @@ and access policies.
 
 2) Because of certain services propagation time between teardown and spinup 
 I took the liberty of injecting a random 4 letter string into some of the services'
-names. The state will overwrite them because there is no save mechanism. 
+names. The state will overwrite them because there is no save mechanism.
+
+3) This is a test/dummy deployment so security was in the best interest of no one here. 
+That being said it is crucial to run 
+```
+terraform destroy
+```
+as well as logging into you AWS Console to double check permissions are cleaned up. 
+
+ 
 
 
