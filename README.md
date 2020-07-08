@@ -1,6 +1,6 @@
-#Fox Corporation Terraform Project
+# Fox Corporation Terraform Project
 
-Use this Terraform  to generate:
+### Use this Terraform  to generate:
 
 * An S3 bucket
 
